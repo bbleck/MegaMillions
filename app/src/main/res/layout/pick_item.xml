@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content">
+
+  <android.support.constraint.Guideline
+    android:id="@+id/guide_0"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintGuide_percent=".166"/>
+
+  <android.support.constraint.Guideline
+    android:id="@+id/guide_1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintGuide_percent=".332"/>
+  <android.support.constraint.Guideline
+    android:id="@+id/guide_2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    android:orientation="vertical"
+    app:layout_constraintGuide_percent=".5"/>
+  <android.support.constraint.Guideline
+    android:id="@+id/guide_3"
+    android:layout_width="wrap_content"
+
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintGuide_percent=".667"/>
+  <android.support.constraint.Guideline
+    android:id="@+id/guide_4"
+    android:layout_width="wrap_content"
+
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintGuide_percent=".833"/>
+
+  <TextView
+    android:id="@+id/num_0"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/base_margin"
+    app:layout_constraintHorizontal_chainStyle="packed"
+    app:layout_constraintEnd_toStartOf="@+id/num_1"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"/>
+
+  <TextView
+    android:id="@+id/num_1"
+    android:layout_margin="@dimen/base_margin"
+
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toStartOf="@+id/num_2"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toEndOf="@+id/num_0"
+    />
+  <TextView
+    android:id="@+id/num_2"
+    android:layout_margin="@dimen/base_margin"
+
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toStartOf="@+id/num_3"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toEndOf="@+id/num_1"
+    />
+  <TextView
+    android:id="@+id/num_3"
+    android:layout_margin="@dimen/base_margin"
+
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toStartOf="@+id/num_4"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toEndOf="@+id/num_2"
+    />
+  <TextView
+    android:id="@+id/num_4"
+    android:layout_margin="@dimen/base_margin"
+
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toStartOf="@+id/num_5"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toEndOf="@+id/num_3"
+    />
+  <TextView
+    android:id="@+id/num_5"
+    android:layout_margin="@dimen/base_margin"
+
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toEndOf="@+id/num_4"
+    />
+
+</android.support.constraint.ConstraintLayout>
