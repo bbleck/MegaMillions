@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
-    generator = new MMGenerator(new SecureRandom());
+
     Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
     setSupportActionBar(toolbar);
     pickListView = findViewById(R.id.pick_list_view);
@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
     adapter = new PickAdapter(this, picks);
     pickListView.setAdapter(adapter);
     rng = new SecureRandom();
+    generator = new MMGenerator(rng);
 //    manager = new LinearLayoutManager(this);
 //    pickListView.setLayoutManager(manager);
     FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.add_pick);
@@ -62,13 +63,15 @@ public class MainActivity extends AppCompatActivity {
     // Handle action bar item clicks here. The action bar will
     // automatically handle clicks on the Home/Up button, so long
     // as you specify a parent activity in AndroidManifest.xml.
-    int id = item.getItemId();
-
-    //noinspection SimplifiableIfStatement
-    if (id == R.id.action_settings) {
-      return true;
+    boolean handled = true;
+    switch(item.getItemId()){
+      case R.id.action_clear:
+        picks.clear();
+        adapter.notifyDataSetChanged();
+        break;
+      default:
+        handled = super.onOptionsItemSelected(item);
     }
-
-    return super.onOptionsItemSelected(item);
+    return handled;
   }
 }

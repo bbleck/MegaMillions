@@ -5,14 +5,14 @@
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  app:layout_behavior="@string/appbar_scrolling_view_behavior"
+  android:paddingTop="?actionBarSize"
   tools:context=".controller.MainActivity"
   tools:showIn="@layout/activity_main">
 
   <android.support.v7.widget.RecyclerView
     android:id="@+id/pick_list_view"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="0dp"
     app:layoutManager="android.support.v7.widget.LinearLayoutManager"
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintBottom_toBottomOf="parent"/>
